@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Normalize.css for better cross-browser consistency -->
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Lighthouse Recommendations -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Restaurant Reviews</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a tabindex="0" id="main-page-skip" href="#neighborhoods-select" class="skip-content">Skip over the map and directly to the first filter</a>
+  <header>
+    <nav>
+      <h1><a href="/" aria-label="reviews page" role="navigation">Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+  <main id="maincontent" role="main">
+    <section id="map-container" aria-hidden="true">
+      <div id="map" aria-hidden="true" role="application" aria-label="Google Maps"></div>
+    </section>
+    <section>
+      <div class="filter-options">
+        <h2>Filter Results</h2>
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Filter by neighborhoods">
+              <option value="all" class="radio">All Neighborhoods</option>
+            </select>
+        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Filter by Cuisines">
+              <option value="all">All Cuisines</option>
+            </select>
+      </div>
+      <div id="restaurant-list-wrapper">
+        <ul id="restaurants-list" aria-label="List of Restaurants" tabindex="0" value="all"></ul>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/" aria-label="refresh reviews page" role="navigation"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+  <div id="offlineModal" class="modal">
+    <p>You are currently offline. Your request will be processed when an internet connection has been made</p>
+    <a href="#" rel="modal:close">Close</a>
+  </div>
+  <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/jquery.js" ></script>
+  <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/jqueryModal.js" ></script>
+  <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/register.js" ></script>
+  <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/lazy.js" ></script>
+  <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/fav.js" ></script>
+  <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/idb.js" ></script>
+  <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/dbHelper.js" ></script>
+  <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/main.js" ></script>
+  <!--<script  rel="dns-prefetch " src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6jw1Tjsh8RzkU4e014eUosf4FWBdYTM&callback=initMap" type="text/javascript" defer></script>-->
+</body>
+</html>

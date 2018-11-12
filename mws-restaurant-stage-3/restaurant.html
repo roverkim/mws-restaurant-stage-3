@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Lighthouse Recommendations -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Normalize.css for better cross-browser consistency -->
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Restaurant Info</title>
+</head>
+
+<body class="inside">
+  <a tabindex="0" id="main-page-skip" href="#restaurant-container" class="skip-content" title="Skip over the map to main content">
+
+    <!-- Beginning header -->
+    <header>
+      <!-- Beginning nav -->
+      <nav>
+        <h1><a href="/" aria-label="navigate to main reviews page" role="navigation">Restaurant Reviews</a></h1>
+      </nav>
+      <!-- Beginning breadcrumb -->
+      <ul id="breadcrumb">
+        <li><a href="/" role="navigation" aria-label="return to home page">Home</a></li>
+      </ul>
+      <!-- End breadcrumb -->
+      <!-- End nav -->
+    </header>
+    <!-- End header -->
+
+    <!-- Beginning main -->
+    <main id="maincontent" role="main">
+      <!-- Beginning map -->
+      <section id="map-container" aria-hidden="true">
+        <div id="map" aria-hidden="true" role="application" aria-label="Google Maps"></div>
+      </section>
+      <!-- End map -->
+      <!-- Beginning restaurant -->
+      <section id="restaurant-container" aria-label="restaurant information section" tabindex="0">
+        <h1 id="restaurant-name" aria-label="restaurant name"></h1>
+        <img id="restaurant-img">
+        <p id="restaurant-cuisine" tabindex="0"></p>
+        <div id="fav-button-container"></div>
+        <p id="restaurant-address" tabindex="0"></p>
+        <table id="restaurant-hours" tabindex="0"></table>
+      </section>
+      <!-- end restaurant -->
+      <!-- Beginning reviews -->
+      <section id="reviews-container" aria-label="restaurant reviews section" tabindex="0">
+        <ul id="reviews-list"></ul>
+      </section>
+      <!-- End reviews -->
+    </main>
+    <!-- End main -->
+
+    <!-- Beginning footer -->
+    <footer id="footer">
+      Copyright (c) 2017 <a href="/" aria-label="navigate to main reviews page" role="navigation"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    </footer>
+    <!-- End footer -->
+    <div id="offlineModal" class="modal">
+      <p>You are currently offline. Your request will be processed when an internet connection has been made</p>
+      <a href="#" rel="modal:close">Close</a>
+    </div>
+  
+    <!-- Beginning scripts -->
+    <!-- Main javascript file -->
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/jquery.js" ></script>
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/jqueryModal.js" ></script>
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/register.js" ></script>
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/lazy.js" ></script>
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/fav.js" ></script>
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/idb.js" ></script>
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/dbHelper.js" ></script>
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/reviewform.js" ></script>
+    <script rel="preload"  defer type="application/javascript" charset="utf-8" src="js/restaurantJs.js" ></script>
+    <!-- Register Service Worker Script-->
+    <!-- End scripts -->
+</body>
+
+</html>
